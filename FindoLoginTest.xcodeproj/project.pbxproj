@@ -11,6 +11,8 @@
 		C13CAE042A3467E700401B4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13CAE032A3467E700401B4E /* ContentView.swift */; };
 		C13CAE062A3467E700401B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C13CAE052A3467E700401B4E /* Assets.xcassets */; };
 		C13CAE092A3467E700401B4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C13CAE082A3467E700401B4E /* Preview Assets.xcassets */; };
+		C13CAE102A34682800401B4E /* welcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13CAE0F2A34682800401B4E /* welcomeView.swift */; };
+		C1F3112E2A3482100009F7DB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F3112D2A3482100009F7DB /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		C13CAE032A3467E700401B4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C13CAE052A3467E700401B4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C13CAE082A3467E700401B4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C13CAE0F2A34682800401B4E /* welcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeView.swift; sourceTree = "<group>"; };
+		C13CAE112A3468A700401B4E /* FindoLoginTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FindoLoginTest.entitlements; sourceTree = "<group>"; };
+		C1F3112D2A3482100009F7DB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +56,11 @@
 		C13CAE002A3467E700401B4E /* FindoLoginTest */ = {
 			isa = PBXGroup;
 			children = (
+				C13CAE112A3468A700401B4E /* FindoLoginTest.entitlements */,
 				C13CAE012A3467E700401B4E /* FindoLoginTestApp.swift */,
 				C13CAE032A3467E700401B4E /* ContentView.swift */,
+				C13CAE0F2A34682800401B4E /* welcomeView.swift */,
+				C1F3112D2A3482100009F7DB /* SignUpView.swift */,
 				C13CAE052A3467E700401B4E /* Assets.xcassets */,
 				C13CAE072A3467E700401B4E /* Preview Content */,
 			);
@@ -139,6 +147,8 @@
 			files = (
 				C13CAE042A3467E700401B4E /* ContentView.swift in Sources */,
 				C13CAE022A3467E700401B4E /* FindoLoginTestApp.swift in Sources */,
+				C1F3112E2A3482100009F7DB /* SignUpView.swift in Sources */,
+				C13CAE102A34682800401B4E /* welcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +274,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FindoLoginTest/FindoLoginTest.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FindoLoginTest/Preview Content\"";
@@ -280,8 +292,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MinusTwo.FindoLoginTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MinusTwo.FindoLoginTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,6 +306,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FindoLoginTest/FindoLoginTest.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FindoLoginTest/Preview Content\"";
@@ -309,8 +324,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MinusTwo.FindoLoginTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MinusTwo.FindoLoginTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
