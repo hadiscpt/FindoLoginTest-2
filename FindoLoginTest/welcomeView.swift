@@ -17,6 +17,10 @@ struct welcomeView: View {
     @AppStorage("lastName") var lastName: String = ""
     @AppStorage("userId") var userId: String = ""
     
+    private var isSignedIn: Bool {
+        !userId.isEmpty
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -35,21 +39,20 @@ struct welcomeView: View {
                         .imageScale(.small)
                         .foregroundColor(.accentColor)
                     Group {
-                            Text("Find ")
+                            Text("Temukan ")
                             .font(.title2)
                             .fontWeight(.semibold)
                                 .foregroundColor(Color.orange) +
-                            Text("your nearest ")
+                            Text("orang ")
                             .font(.title2)
                             .fontWeight(.semibold)
                             .foregroundColor(Color.white) +
-                            Text("Indonesian")
+                            Text("Indonesia")
                             .font(.title2)
                             .fontWeight(.semibold)
-                                .foregroundColor(Color.orange)
-                                
+                            .foregroundColor(Color.orange)
                         }
-                    Text("Discover fellow Indonesian foreign students nearby, forge friendships, and cultivate shared interests!")
+                    Text("Temukan sesama pelajar Indonesia terdekat, bina persahabatan, dan kembangkan minat bersama!")
                         .font(.title3)
                         .foregroundColor(Color.white)
                     
@@ -58,53 +61,19 @@ struct welcomeView: View {
                     
                     VStack{
                         NavigationLink(
-                            destination: SignUpView(),
+                            destination: SignUpView().navigationBarHidden(true),
                             label: {
                                 SignUpButton (title: "Sign Up")
                                     .padding()
                             })
                     }
-                        
-                    SignInWithAppleButton(.continue) {
-                        request in
-                        
-                        request.requestedScopes = [.email, .fullName]
-                        
-                    } onCompletion: { result in
-                        
-                        switch result {
-                        case .success(let auth):
-                            switch auth.credential {
-                            case let credential as ASAuthorizationAppleIDCredential:
-                                //user id
-                                let userId = credential.user
-                                
-                                let email = credential.email
-                                let firstName = credential.fullName?.givenName
-                                let lastName = credential.fullName?.familyName
-                                
-                                self.email = email ?? ""
-                                self.userId = userId
-                                self.firstName = firstName ?? ""
-                                self.lastName = lastName ?? ""
-                                
-                            default:
-                                break
-                            }
-                            
-                            
-                            
-                        case .failure(let error):
-                            print(error)
-                        }
+                    
+                    if userId.isEmpty {
+                        SignInButtonView()
                         
                     }
-                    .signInWithAppleButtonStyle(
-                        colorScheme == .dark ? .white : .black
-                        )
-                    .cornerRadius(50)
-                    .frame(height: 54)
-                    .padding()
+                        
+                    
                     
                 }
                 
@@ -116,6 +85,62 @@ struct welcomeView: View {
 struct welcomeView_Previews: PreviewProvider {
     static var previews: some View {
         welcomeView()
+    }
+}
+
+struct SignInButtonView: View {
+    @State private var signedIn = false
+    @Environment(\.colorScheme) var colorScheme
+    
+    @AppStorage("email") var email: String = ""
+    @AppStorage("firstName") var firstName: String = ""
+    @AppStorage("lastName") var lastName: String = ""
+    @AppStorage("userId") var userId: String = ""
+    
+    var body: some View {
+        SignInWithAppleButton(.continue) {
+            request in
+            
+            request.requestedScopes = [.email, .fullName]
+            
+        } onCompletion: { result in
+            
+            switch result {
+            case .success(let auth):
+                // handle successfull authorization
+                signedIn = true
+                switch auth.credential {
+                case let credential as ASAuthorizationAppleIDCredential:
+                    //user id
+                    let userId = credential.user
+                    
+                    let email = credential.email
+                    let firstName = credential.fullName?.givenName
+                    let lastName = credential.fullName?.familyName
+                    
+                    self.email = email ?? ""
+                    self.userId = userId
+                    self.firstName = firstName ?? ""
+                    self.lastName = lastName ?? ""
+                    
+                default:
+                    break
+                }
+                
+                
+                
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
+        .signInWithAppleButtonStyle(
+            colorScheme == .dark ? .white : .black
+            )
+        .cornerRadius(50)
+        .frame(height: 54)
+        .padding()
+        
     }
 }
 
