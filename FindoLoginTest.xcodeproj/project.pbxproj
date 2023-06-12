@@ -12,6 +12,25 @@
 		C13CAE062A3467E700401B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C13CAE052A3467E700401B4E /* Assets.xcassets */; };
 		C13CAE092A3467E700401B4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C13CAE082A3467E700401B4E /* Preview Assets.xcassets */; };
 		C13CAE102A34682800401B4E /* welcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13CAE0F2A34682800401B4E /* welcomeView.swift */; };
+		C15AB1FC2A35AF5400AF5AE2 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15AB1F32A35AF5300AF5AE2 /* CommunityView.swift */; };
+		C15AB1FD2A35AF5400AF5AE2 /* ScrollDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15AB1F42A35AF5300AF5AE2 /* ScrollDetector.swift */; };
+		C15AB1FE2A35AF5400AF5AE2 /* Scroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15AB1F52A35AF5300AF5AE2 /* Scroll.swift */; };
+		C15AB1FF2A35AF5400AF5AE2 /* FindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15AB1F62A35AF5300AF5AE2 /* FindView.swift */; };
+		C15AB2002A35AF5400AF5AE2 /* MainProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15AB1F72A35AF5300AF5AE2 /* MainProfile.swift */; };
+		C15AB2012A35AF5400AF5AE2 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15AB1F82A35AF5300AF5AE2 /* UserProfile.swift */; };
+		C15AB2022A35AF5400AF5AE2 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15AB1F92A35AF5300AF5AE2 /* MainTabView.swift */; };
+		C15AB2032A35AF5400AF5AE2 /* FindRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15AB1FA2A35AF5400AF5AE2 /* FindRowView.swift */; };
+		C15AB2042A35AF5400AF5AE2 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15AB1FB2A35AF5400AF5AE2 /* Extentions.swift */; };
+		C15AB2062A35C9DD00AF5AE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15AB2052A35C9DD00AF5AE2 /* AppDelegate.swift */; };
+		C197AD8B2A371AC0005D2F84 /* SetPhotoProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AD8A2A371AC0005D2F84 /* SetPhotoProfile.swift */; };
+		C197AD8D2A371AE6005D2F84 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AD8C2A371AE6005D2F84 /* ImagePicker.swift */; };
+		C197AD8F2A371B0D005D2F84 /* SetProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AD8E2A371B0D005D2F84 /* SetProfile.swift */; };
+		C197AD912A371D01005D2F84 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AD902A371D01005D2F84 /* FilterView.swift */; };
+		C197AD932A371DD9005D2F84 /* ChangeProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AD922A371DD9005D2F84 /* ChangeProfileView.swift */; };
+		C197AD952A371FA8005D2F84 /* NewLah.swift in Sources */ = {isa = PBXBuildFile; fileRef = C197AD942A371FA8005D2F84 /* NewLah.swift */; };
+		C1B5F4A92A35E4060039836E /* profileSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5F4A82A35E4060039836E /* profileSetupView.swift */; };
+		C1B5F4AB2A35F8C90039836E /* hobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5F4AA2A35F8C90039836E /* hobbyView.swift */; };
+		C1B5F4AD2A36028B0039836E /* signUpSuccesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B5F4AC2A36028B0039836E /* signUpSuccesView.swift */; };
 		C1F3112E2A3482100009F7DB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F3112D2A3482100009F7DB /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +42,25 @@
 		C13CAE082A3467E700401B4E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C13CAE0F2A34682800401B4E /* welcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeView.swift; sourceTree = "<group>"; };
 		C13CAE112A3468A700401B4E /* FindoLoginTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FindoLoginTest.entitlements; sourceTree = "<group>"; };
+		C15AB1F32A35AF5300AF5AE2 /* CommunityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
+		C15AB1F42A35AF5300AF5AE2 /* ScrollDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollDetector.swift; sourceTree = "<group>"; };
+		C15AB1F52A35AF5300AF5AE2 /* Scroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scroll.swift; sourceTree = "<group>"; };
+		C15AB1F62A35AF5300AF5AE2 /* FindView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindView.swift; sourceTree = "<group>"; };
+		C15AB1F72A35AF5300AF5AE2 /* MainProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainProfile.swift; sourceTree = "<group>"; };
+		C15AB1F82A35AF5300AF5AE2 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		C15AB1F92A35AF5300AF5AE2 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		C15AB1FA2A35AF5400AF5AE2 /* FindRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindRowView.swift; sourceTree = "<group>"; };
+		C15AB1FB2A35AF5400AF5AE2 /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		C15AB2052A35C9DD00AF5AE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C197AD8A2A371AC0005D2F84 /* SetPhotoProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPhotoProfile.swift; sourceTree = "<group>"; };
+		C197AD8C2A371AE6005D2F84 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C197AD8E2A371B0D005D2F84 /* SetProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProfile.swift; sourceTree = "<group>"; };
+		C197AD902A371D01005D2F84 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		C197AD922A371DD9005D2F84 /* ChangeProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeProfileView.swift; sourceTree = "<group>"; };
+		C197AD942A371FA8005D2F84 /* NewLah.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLah.swift; sourceTree = "<group>"; };
+		C1B5F4A82A35E4060039836E /* profileSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileSetupView.swift; sourceTree = "<group>"; };
+		C1B5F4AA2A35F8C90039836E /* hobbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hobbyView.swift; sourceTree = "<group>"; };
+		C1B5F4AC2A36028B0039836E /* signUpSuccesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpSuccesView.swift; sourceTree = "<group>"; };
 		C1F3112D2A3482100009F7DB /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,7 +99,26 @@
 				C13CAE032A3467E700401B4E /* ContentView.swift */,
 				C13CAE0F2A34682800401B4E /* welcomeView.swift */,
 				C1F3112D2A3482100009F7DB /* SignUpView.swift */,
+				C15AB2052A35C9DD00AF5AE2 /* AppDelegate.swift */,
+				C1B5F4A82A35E4060039836E /* profileSetupView.swift */,
+				C197AD942A371FA8005D2F84 /* NewLah.swift */,
+				C1B5F4AA2A35F8C90039836E /* hobbyView.swift */,
+				C1B5F4AC2A36028B0039836E /* signUpSuccesView.swift */,
 				C13CAE052A3467E700401B4E /* Assets.xcassets */,
+				C15AB1F32A35AF5300AF5AE2 /* CommunityView.swift */,
+				C197AD8A2A371AC0005D2F84 /* SetPhotoProfile.swift */,
+				C197AD8E2A371B0D005D2F84 /* SetProfile.swift */,
+				C15AB1FB2A35AF5400AF5AE2 /* Extentions.swift */,
+				C197AD8C2A371AE6005D2F84 /* ImagePicker.swift */,
+				C15AB1FA2A35AF5400AF5AE2 /* FindRowView.swift */,
+				C15AB1F62A35AF5300AF5AE2 /* FindView.swift */,
+				C15AB1F72A35AF5300AF5AE2 /* MainProfile.swift */,
+				C197AD922A371DD9005D2F84 /* ChangeProfileView.swift */,
+				C15AB1F92A35AF5300AF5AE2 /* MainTabView.swift */,
+				C197AD902A371D01005D2F84 /* FilterView.swift */,
+				C15AB1F52A35AF5300AF5AE2 /* Scroll.swift */,
+				C15AB1F42A35AF5300AF5AE2 /* ScrollDetector.swift */,
+				C15AB1F82A35AF5300AF5AE2 /* UserProfile.swift */,
 				C13CAE072A3467E700401B4E /* Preview Content */,
 			);
 			path = FindoLoginTest;
@@ -145,9 +202,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C15AB2032A35AF5400AF5AE2 /* FindRowView.swift in Sources */,
+				C197AD8B2A371AC0005D2F84 /* SetPhotoProfile.swift in Sources */,
 				C13CAE042A3467E700401B4E /* ContentView.swift in Sources */,
 				C13CAE022A3467E700401B4E /* FindoLoginTestApp.swift in Sources */,
+				C15AB2012A35AF5400AF5AE2 /* UserProfile.swift in Sources */,
+				C15AB2062A35C9DD00AF5AE2 /* AppDelegate.swift in Sources */,
+				C1B5F4A92A35E4060039836E /* profileSetupView.swift in Sources */,
+				C197AD912A371D01005D2F84 /* FilterView.swift in Sources */,
+				C197AD8D2A371AE6005D2F84 /* ImagePicker.swift in Sources */,
+				C15AB2002A35AF5400AF5AE2 /* MainProfile.swift in Sources */,
+				C15AB1FD2A35AF5400AF5AE2 /* ScrollDetector.swift in Sources */,
+				C1B5F4AD2A36028B0039836E /* signUpSuccesView.swift in Sources */,
+				C15AB2022A35AF5400AF5AE2 /* MainTabView.swift in Sources */,
+				C1B5F4AB2A35F8C90039836E /* hobbyView.swift in Sources */,
+				C197AD932A371DD9005D2F84 /* ChangeProfileView.swift in Sources */,
 				C1F3112E2A3482100009F7DB /* SignUpView.swift in Sources */,
+				C15AB2042A35AF5400AF5AE2 /* Extentions.swift in Sources */,
+				C15AB1FE2A35AF5400AF5AE2 /* Scroll.swift in Sources */,
+				C197AD8F2A371B0D005D2F84 /* SetProfile.swift in Sources */,
+				C197AD952A371FA8005D2F84 /* NewLah.swift in Sources */,
+				C15AB1FF2A35AF5400AF5AE2 /* FindView.swift in Sources */,
+				C15AB1FC2A35AF5400AF5AE2 /* CommunityView.swift in Sources */,
 				C13CAE102A34682800401B4E /* welcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

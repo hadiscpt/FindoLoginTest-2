@@ -8,6 +8,8 @@ import AuthenticationServices
 import SwiftUI
 
 struct SignUpView: View {
+    @State private var isModalPresented = false
+    
     @Environment(\.colorScheme) var colorScheme
 
     @AppStorage("email") var email: String = ""
@@ -82,40 +84,87 @@ struct SignUpView: View {
                     }
                     
                 }
-                SignInWithAppleButton(.continue) {
-                    request in
-                    
-                    request.requestedScopes = [.email, .fullName]
-                    
-                } onCompletion: { result in
-                    
-                    switch result {
-                    case .success(let auth):
-                        switch auth.credential {
-                        case let credential as ASAuthorizationAppleIDCredential:
-                            //user id
-                            let userId = credential.user
+                
+                VStack{
+                    NavigationLink(
+                        destination: SetPhotoProfile().navigationBarHidden(true),
+                        label: {
+                            SignInWithAppleButton(.continue) {
+                                request in
+                                
+                                request.requestedScopes = [.email, .fullName]
+                                
+                            } onCompletion: { result in
+                                
+                                switch result {
+                                case .success(let auth):
+                                    switch auth.credential {
+                                    case let credential as ASAuthorizationAppleIDCredential:
+                                        //user id
+                                        let userId = credential.user
+                                        
+                                        let email = credential.email
+                                        let firstName = credential.fullName?.givenName
+                                        let lastName = credential.fullName?.familyName
+                                        
+                                        self.email = email ?? ""
+                                        self.userId = userId
+                                        self.firstName = firstName ?? ""
+                                        self.lastName = lastName ?? ""
+                                        
+                                    default:
+                                        break
+                                    }
+                                    
+                                    
+                                    
+                                case .failure(let error):
+                                    print(error)
+                                }
+                                
+                            }
                             
-                            let email = credential.email
-                            let firstName = credential.fullName?.givenName
-                            let lastName = credential.fullName?.familyName
-                            
-                            self.email = email ?? ""
-                            self.userId = userId
-                            self.firstName = firstName ?? ""
-                            self.lastName = lastName ?? ""
-                            
-                        default:
-                            break
-                        }
-                        
-                        
-                        
-                    case .failure(let error):
-                        print(error)
-                    }
-                    
+//                            SignInButtonView()
+//                                .padding()
+                        })
                 }
+                
+                
+                
+//                SignInWithAppleButton(.continue) {
+//                    request in
+//
+//                    request.requestedScopes = [.email, .fullName]
+//
+//                } onCompletion: { result in
+//
+//                    switch result {
+//                    case .success(let auth):
+//                        switch auth.credential {
+//                        case let credential as ASAuthorizationAppleIDCredential:
+//                            //user id
+//                            let userId = credential.user
+//
+//                            let email = credential.email
+//                            let firstName = credential.fullName?.givenName
+//                            let lastName = credential.fullName?.familyName
+//
+//                            self.email = email ?? ""
+//                            self.userId = userId
+//                            self.firstName = firstName ?? ""
+//                            self.lastName = lastName ?? ""
+//
+//                        default:
+//                            break
+//                        }
+//
+//
+//
+//                    case .failure(let error):
+//                        print(error)
+//                    }
+//
+//                }
                 .signInWithAppleButtonStyle(
                     colorScheme == .dark ? .white : .black
                     )
@@ -124,15 +173,8 @@ struct SignUpView: View {
                 .padding()
                 
                 Divider()
-                VStack{
-                    Text ("Dengan melanjutkan untuk Sign Up anda setuju dengan ketentuan dan persyaratan aplikasi ini")
-                            .font(.subheadline)
-                            .multilineTextAlignment(.leading)
-                            .foregroundColor(Color.white)
-                            .padding(.horizontal, 20.0)
-                }
+
                 
-            
 
             }
             
@@ -140,6 +182,8 @@ struct SignUpView: View {
         }
     }
 }
+
+
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
